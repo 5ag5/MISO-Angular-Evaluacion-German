@@ -22,7 +22,7 @@ export class VehiculoComponent implements OnInit {
   getVehiculos() {
     this.vehiculoService.getVehiculos().subscribe(data => {
       this.vehiculos = data;
-      this.countVehiculos();               // <-- ¡calcular y emitir cuando ya hay datos!
+      this.countVehiculos();    
     });
   }
 
@@ -31,6 +31,6 @@ export class VehiculoComponent implements OnInit {
     for (const v of this.vehiculos) {
       this.mapaCarros.set(v.marca, (this.mapaCarros.get(v.marca) || 0) + 1);
     }
-    this.marcasSumaTotal.emit(this.mapaCarros); // <-- emite con datos reales
+    this.marcasSumaTotal.emit(this.mapaCarros);
   }
 }
