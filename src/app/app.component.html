@@ -7,25 +7,25 @@
 </head>
 <body>
     <div style="padding: 1%;">
-    <header>
-        <h2>TuSegundazo.com</h2>
-        <hr>
-    </header>
-    <div class="container-fluid px-0">
-        <img src="../assets/carro_foto.png" class="w-100 d-block" style="height: 320px; object-fit: cover;" alt="CarroImg">
+        <header>
+            <h2>TuSegundazo.com</h2>
+            <hr>
+        </header>
+        <div class="container-fluid px-0">
+            <img src="../assets/carro_foto.png" class="w-100 d-block" style="height: 320px; object-fit: cover;" alt="CarroImg">
+        </div>
+        <br>
+        <app-vehiculo (marcasSumaTotal)="onMarcasSumaTotal($event)" ></app-vehiculo>
+        <div class="mt-3" *ngIf="totalMarcasPadre?.size">
+            <p *ngFor="let carro of totalMarcasPadre | keyvalue">
+                Total {{ carro.key }}: {{ carro.value }}
+            </p>
+        </div>
+        <br>
+        <footer>
+            <p class="w-100 d-block text-center m-0">Contact us: +57 3102105253 - info&#64;tusegundazo.com - &#64;tusegundazo.com</p>
+        </footer>
     </div>
-    <br>
-    <app-vehiculo (marcasSumaTotal)="onMarcasSumaTotal($event)"></app-vehiculo>
-    
-    <div class="mt-3" *ngIf="totalMarcasPadre?.size">
-        <p *ngFor="let item of totalMarcasPadre | keyvalue" class="mb-1">
-            Total {{ item.key }}: {{ item.value }}
-        </p>
-    </div>
-    </div>
-    <footer>
-        <p class="w-100 d-block text-center m-0">Contact us: +57 3102105253 - info&#64;tusegundazo.com - &#64;tusegundazo.com</p>
-    </footer>
 </body>
 </html>
 
