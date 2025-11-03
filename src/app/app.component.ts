@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'evaluacion-angular-german';
+
+  totalMarcasPadre: Map<string, number> = new Map();
+
+  onMarcasSumaTotal(totals: Map<string, number>) {
+    this.totalMarcasPadre = totals;
+  }
 }

@@ -1,0 +1,19 @@
+    <table class="table">
+    <thead class="table-dark">
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Linea</th>
+        <th scope="col">Modelo</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let v of vehiculos">
+        <tr>
+            <th scope="row">{{v.id}}</th>
+            <td>{{v.marca}}</td>
+            <td>{{v.linea}}</td>
+            <td>{{v.modelo}}</td>
+        </tr>
+    </tbody>
+    </table>
+    
